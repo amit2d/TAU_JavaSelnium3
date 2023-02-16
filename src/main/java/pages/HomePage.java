@@ -50,7 +50,12 @@ public class HomePage {
 
     public FileUploadPage clickOnFileUploadPage () {
         clickLink("File Upload");
-        return new FileUploadPage (driver);
+        return new FileUploadPage(driver);
+    }
+
+    public ContextMenuPage clickOnContextMenuPage () {
+        clickLink("Context Menu");
+        return new ContextMenuPage(driver);
     }
 
     private void clickLink (String linkText) {
