@@ -2,6 +2,9 @@ package pages;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.time.Duration;
 
 public class HomePage {
 
@@ -11,6 +14,7 @@ public class HomePage {
 
     public HomePage (WebDriver driver) {
         this.driver = driver;
+//        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5)); implicit wait
     }
 
     public LoginPage clickFormAuthentication() {
@@ -66,6 +70,11 @@ public class HomePage {
     public FramesPage clickOnFramesPage () {
         clickLink("Frames");
         return new FramesPage(driver);
+    }
+
+    public DynamicLoadingPage clickOnDynamicLoadingPage () {
+        clickLink("Dynamic Loading");
+        return  new DynamicLoadingPage(driver);
     }
 
     private void clickLink (String linkText) {
