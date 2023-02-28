@@ -13,6 +13,8 @@ public class DynamicLoadingPage {
 
     private final WebDriver driver;
     private By elementOnPageHidden = By.linkText("Example 1: Element on page that is hidden");
+
+    private By elementOnPageAfterLoad = By.linkText("Example 2: Element rendered after the fact");
     private By startButton = By.cssSelector("#start button");
     private By loadingIndicator = By.id("loading");
     private By loadedText = By.id("finish");
@@ -25,6 +27,12 @@ public class DynamicLoadingPage {
     public void clickOnFirstLink() {
         driver.findElement(elementOnPageHidden).click();
     }
+
+
+    public void clickOnSecondLink() {
+        driver.findElement(elementOnPageAfterLoad).click();
+    }
+
 
     public void clickOnStartButton () {
         driver.findElement(startButton).click();
