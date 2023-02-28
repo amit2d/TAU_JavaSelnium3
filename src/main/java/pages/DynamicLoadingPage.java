@@ -28,9 +28,11 @@ public class DynamicLoadingPage {
         driver.findElement(elementOnPageHidden).click();
     }
 
+
     public void clickOnSecondLink() {
         driver.findElement(elementOnPageAfterLoad).click();
     }
+
 
     public void clickOnStartButton () {
         driver.findElement(startButton).click();

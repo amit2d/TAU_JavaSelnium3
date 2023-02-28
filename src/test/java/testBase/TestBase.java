@@ -7,7 +7,9 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 import pages.HomePage;
+
 import util.WindowManager;
+
 
 public class TestBase {
 
@@ -25,6 +27,12 @@ public class TestBase {
     public WindowManager getWindowManager() {
         return new WindowManager(driver);
     }
+
+    @BeforeMethod
+    public void goHome() {
+        driver.get("https://the-internet.herokuapp.com/");
+    }
+
 
     @BeforeMethod
     public void goHome() {
